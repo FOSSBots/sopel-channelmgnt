@@ -10,13 +10,13 @@ with open('requirements.txt') as requirements_file:
 
 setup(
     name='sopel_plugins.channelmgnt',
-    version='2.1.1',
+    version='2.1.2',
     description='Channelmgnt plugin for Sopel',
     long_description=readme,
     long_description_content_type='text/markdown',  # This is important!
     author='MirahezeBot Contributors',
-    author_email='staff@mirahezebots.org',
-    url='https://github.com/MirahezeBots/sopel-channelmgnt',
+    author_email='staff@fossbots.org',
+    url='https://github.com/FOSSBots/sopel-channelmgnt',
     packages=find_packages('.'),
     include_package_data=True,
     install_requires=requirements,
