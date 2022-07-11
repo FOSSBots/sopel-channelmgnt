@@ -41,10 +41,9 @@ jobs:
           pytest .
           bandit sopel_channelmgnt -r
           pip check
-      - name: Run pip freeze and pipdeptree
+      - name: Run pip freeze
         run: |
           pip freeze
-          pipdeptree
       - name: Show outdated packages
         run: pip list --outdated
   deploy:
