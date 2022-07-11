@@ -129,7 +129,7 @@ def makemodechange(bot, trigger, mode, isusermode=False, isbqmode=False, selfsaf
     if chanops:
         if bot.channels[trigger.sender].privileges[bot.nick] < OP and trigger.account in chanops:
             bot.say('Attempting to OP...')
-            bot.say('op ' + trigger.sender, 'ChanServ')
+            bot.write(['PRIVMSG', 'ChanServ'], text=f'op {trigger.sender}')
             time.sleep(1)
             dodeop = True
         if (isusermode and not trigger.group(2) and selfsafe
